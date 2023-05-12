@@ -1,0 +1,173 @@
+.catalog {
+    padding-bottom: 103px;
+    &__tabs {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+    }
+    &__tab {
+        width: 220px;
+        height: 50px;
+        border: 2px solid #d0d0d0;
+        margin: 0 5px;
+        margin-top: 69px;
+        text-align: center;
+        line-height: 48px;
+        font-size: 18px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #6b6b6b;
+        transform: skewX(-25deg);
+        transition: 0.5s all;
+        cursor: pointer;
+        div {
+            transform: skewX(25deg);
+        }
+        &_active {
+            background-color: #c70101;
+            color: #fff;
+            border: none;
+        }
+        &:hover {
+            box-shadow: 5px 5px 20px indigo;
+            border: none;
+        }
+    }
+    &__content {
+        margin-top: 60px;
+        display: none;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &_active {
+            display: flex;
+        }
+    }
+
+
+    &-item {
+        width: 300px;
+        min-height: 440px;
+        border: 2px solid #e8e8e8;
+        padding: 20px 20px 26px 20px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        &__img {
+            max-width: 100%;
+            height: 200px;
+            display: block;
+            margin: 0 auto;
+        }
+        &__subtitle {
+            font-size: 16px;
+            line-height: 1.2;
+            font-weight: 700;
+            color: #0d0d0d;
+            text-align: center;
+            margin-top: 20px;
+        }
+        &__descr {
+            font-size: 14px;
+            line-height: 1.2;
+            font-weight: 300;
+            color: #0d0d0d;
+            text-align: center;
+            margin-top: 16px;
+        }
+        &__link {
+            display: block;
+            margin-top: 17px;
+            font-size: 14px;
+            line-height: 1.2;
+            font-weight: 500;
+            text-decoration: underline;
+            color: #c70101;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        hr {
+            height: 1px;
+            background-color: #e8e8e8;
+            margin-top: 19px;
+            border-bottom: none;
+        }
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__old-price {
+            font-size: 14px;
+            line-height: 1.2;
+            font-weight: 300;
+            color: #555555;
+            text-decoration: line-through;
+        }
+        &__new-price {
+            font-size: 20px;
+            line-height: 1.2;
+            font-weight: 700;
+            color: #050505;
+        }
+
+        &__wrapper {
+            width: calc(200% + 40px);
+            display: flex;
+        }
+
+        &__content {
+            width: 50%;
+            margin-right: 0px;
+            transform: translateX(-100%);
+            transition: 1s all;
+            &_active {
+                transform: translateX(0%);
+                margin-right: 20px;
+            }
+        }
+
+        &__list {
+            position: relative;
+            width: 50%;
+            margin-left: 20px;
+            transform: translateX(0%);
+            list-style-type: none;
+            margin-bottom: 0px;
+            padding-left: 19px;
+            padding-right: 20px;
+            transition: 1s all;
+            li {
+                position: relative;
+                font-size: 14px;
+                line-height: 1.2;
+                font-weight: 300;
+                color: #0d0d0d;
+                margin-bottom: 20px;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 4px;
+                    left: -18px;
+                    width: 5px;
+                    height: 5px;
+                    background-color: #c70101;
+                }
+            }
+            &_active {
+                transform: translateX(-100%);
+                margin-left: 0px;
+            }
+        }
+        &__back {
+            position: absolute;
+            display: block;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(calc(-50% - 19px));
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: underline;
+            color: #c70101;
+            text-transform: uppercase;
+        }
+    }
+}
